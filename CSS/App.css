@@ -1,0 +1,85 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    font-size:1.6 rem;
+    font-family: "Lato", sans-serif;
+    background-color: #577dbb;
+}
+*,*:before, *:after{
+box-sizing: inherait;
+}
+
+header {
+    padding: 3 ren 0;
+}
+header h1{
+    text-align: center;
+    color: #21883c;
+    font-size: 3.2 rem;
+}
+header h2{
+    text-align: center;
+}
+header p{
+    color: #1b1b1b1b;
+    text-align: center;
+    font-size: 3.2 rem;
+
+}
+header p a {
+    text-decoration: none;
+    margin: 0;
+}
+.DOM{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.DOM h2{
+    color: #fff;
+    text-align: center;
+
+}
+.DOM nav a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: noe;
+    margin-right: 10px;
+}
+.DOM p {
+    color: #2563eb;
+    font-size: 20px;
+}
+.DOM #formulario{
+    max-width: 200px;
+    margin: 0 auto;
+}
+.DOM #formulario input{
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+.DOM #formulario input[type="submit"]{
+    background-color: lightblue;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+
+.alerta{
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.alerta.error {
+    background-color: rgb(162,0,0);
+
+}
+.alerta.exito{
+    background-color: rgb(7,145,7);
+}
