@@ -146,3 +146,98 @@ console.log("La estructura y valores del objeto PEDIDO son previos a la modifica
 console.table(Pedido);
 delete Pedido.TipoPago;
 console.table(Pedido);
+
+
+// Eliminar propiedades existentes de un objeto
+console.log("%c6.- Eliminar propiedades existentes de un objeto", "color: blue;");
+console.log("La estructura y valores del objeto PEDIDO son previos a la modificación:");
+console.table(Pedido);
+delete Pedido.TipoPago;
+console.table(Pedido);
+
+// Congelar objeto para evitar modificaciones
+console.log("%c7.- Metodos para controlar la mutabilidad de los objetos, congelación (FREEZE)", "color: blue;");
+console.log("La estructura actual del objeto COMPRADOR ES: ");
+console.table(comprador);
+Object.freeze(comprador);
+
+// Intentamos modificar el objeto congelado
+comprador.fechaUltimaCompra = "05-09-2024";
+delete comprador.Tipo;
+comprador.Direccion = "calle 16 de septiembre #102, col manantiales, Huachinango, Puebla.";
+console.log("Verificamos si se realizaron los cambios en el objeto COMPRADOR:");
+console.table(comprador);
+
+// Sellar objeto para restringir modificaciones
+console.log("%c8.- Metodos para controlar la mutabilidad de los objetos, sellando (SEAL)", "color: blue;");
+console.log("Objeto antes de ser modificado:");
+console.table(Pedido);
+
+// Sellamos el objeto
+Object.seal(Pedido);
+
+// Intentamos modificar su estructura
+Pedido['FechaPedido'] = "25/09/2024 :11:05:03";
+delete Pedido['cantidad'];
+console.log("Verificación si se realizaron los cambios en el objeto PEDIDO:");
+console.table(Pedido);
+
+// Intentamos modificar el valor de las propiedades
+Pedido.Cantidad = 5;
+console.log("Verificamos si se realizaron los cambios en el Objeto PEDIDO:");
+console.table(Pedido);
+
+// Desestructuración de 2 o más objetos
+console.log("%c9.- Desestructuración de 2 o más objetos", "color: blue;");
+let { Precio: productoPrecio, Marca: productoMarca } = Producto;
+let { correo: clienteCorreo, Pais_Origen: clientePais, Saldo: clienteSaldo, Tipo: clienteTipo } = comprador;
+
+//Transformar valores cuantitativos en cualitativos
+if(productoPrecio>2000){
+    productoPrecio="caro"
+} 
+else{
+    productoPrecio="Barato"
+}
+if(clienteSaldo>0){
+    clienteSaldo="A favor"
+}
+else if(clienteSaldo<0){
+    clienteSaldo="En contra"
+}
+else{
+    clienteSaldo="Sin deudas"
+}
+
+// Transformar valores cuantitativos en cualitativos
+let clientenivel1;
+
+if (clienteTipo=="Premiun ");
+clientenivel1==1
+if(clienteTipo=="Premiun");
+clientenivel2==2
+if(clienteTipo=="No identificado");
+
+//clasificamos al cliente por su PAIS DE ORIGEN
+
+if (clientePais=="Mexico")
+clientePais=="Nacional"
+else clientePais=="Extranjero"
+
+// OLE - objet Literal eNHACEMENT 
+
+let datosclientepromociones =  (clienteCorreo, clientePais, clientenivel1, clienteSaldo, productoMarca, productoPrecio)
+
+//El nuevo objeto que creamos seria un ejemplo de la informacion que deberiamos enviar al area de marketing para la difusion de nuevo producto
+console.table(clientepromoción)
+
+//Operaciones sobre objetos
+//union de objetos
+console.log("%c10.- Uniuoin de Objetos usando el metodo de asignación (ASSING", style_console);
+console.log("Imprimirmos la estructura y valores del objeto PRODUCTO")
+console.table(Producto);
+
+//Suponemosque el usuario ya realizo elpago del pedido se covertira en una venta que requiere informacion de ambos objetos
+const venta=Object.assign(producto, Pedido);
+console.log("Consultamos este nuevo objeto VENTA")
+console.table(venta);
