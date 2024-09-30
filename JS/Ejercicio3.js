@@ -1,6 +1,10 @@
 // repaso de objetos 
-const bg = "llenar gradient (11deg, rgba(2,0,36,1) 0%, rgba(9,121,1) 33%)";
-console.warn("Practica 05: Repaso de Objetos en JavaScript");
+const bg = "linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 86%)";
+const style_console = `background:${bg};color:white; border-radius: 6px; padding: 4px; font-size: 1.0rem`;
+
+// Personalización de las salidas a consola 
+console.log("%cPráctica 05: repaso de objetos en JavaScript", style_console);
+
 
 // Variables independientes 
 let producto_nombre = "computadora ASUS gamer laptop 17*";
@@ -131,6 +135,7 @@ console.log(`El nuevo tipo de dato de la disponibilidad es: ${nuevoTipoDisponibi
 
 // Agregar nuevas propiedades al objeto comprador
 console.log("%c5.- Agregar nuevas propiedades al objeto", "color: blue;");
+
 console.log("Los datos actuales del comprador son:");
 console.log(comprador);
 comprador['Direccion'] = "Av. Benito Juárez NO. 1525, Interior 4D, Xicotepec de Júarez, Puebla, México";
@@ -139,14 +144,6 @@ comprador['ActividadReciente'] = true;
 comprador['TotalCompras'] = 3516.25;
 console.log("Después de haber agregado las propiedades Dirección, Tipo, ActividadReciente y TotalCompras:");
 console.table(comprador);
-
-// Eliminar propiedades existentes de un objeto
-console.log("%c6.- Eliminar propiedades existentes de un objeto", "color: blue;");
-console.log("La estructura y valores del objeto PEDIDO son previos a la modificación:");
-console.table(Pedido);
-delete Pedido.TipoPago;
-console.table(Pedido);
-
 
 // Eliminar propiedades existentes de un objeto
 console.log("%c6.- Eliminar propiedades existentes de un objeto", "color: blue;");
@@ -192,52 +189,84 @@ console.log("%c9.- Desestructuración de 2 o más objetos", "color: blue;");
 let { Precio: productoPrecio, Marca: productoMarca } = Producto;
 let { correo: clienteCorreo, Pais_Origen: clientePais, Saldo: clienteSaldo, Tipo: clienteTipo } = comprador;
 
-//Transformar valores cuantitativos en cualitativos
-if(productoPrecio>2000){
-    productoPrecio="caro"
-} 
-else{
-    productoPrecio="Barato"
-}
-if(clienteSaldo>0){
-    clienteSaldo="A favor"
-}
-else if(clienteSaldo<0){
-    clienteSaldo="En contra"
-}
-else{
-    clienteSaldo="Sin deudas"
-}
-
 // Transformar valores cuantitativos en cualitativos
-let clientenivel1;
+if (productoPrecio > 2000) {
+    productoPrecio = "caro";
+} else {
+    productoPrecio = "barato";
+}
 
-if (clienteTipo=="Premiun ");
-clientenivel1==1
-if(clienteTipo=="Premiun");
-clientenivel2==2
-if(clienteTipo=="No identificado");
+if (clienteSaldo > 0) {
+    clienteSaldo = "A favor";
+} else if (clienteSaldo < 0) {
+    clienteSaldo = "En contra";
+} else {
+    clienteSaldo = "Sin deudas";
+}
 
-//clasificamos al cliente por su PAIS DE ORIGEN
+// Clasificamos al cliente por su PAIS DE ORIGEN
+if (clientePais === "Mexico") {
+    clientePais = "Nacional";
+} else {
+    clientePais = "Extranjero";
+}
 
-if (clientePais=="Mexico")
-clientePais=="Nacional"
-else clientePais=="Extranjero"
+// OLE - Object Literal Enhancement
+let datosClientePromociones = {
+    clienteCorreo,
+    clientePais,
+    clientenivel1: clienteTipo === "Premiun" ? 1 : (clienteTipo === "No identificado" ? 0 : undefined), // Asignación adecuada
+    clienteSaldo,
+    productoMarca,
+    productoPrecio
+};
 
-// OLE - objet Literal eNHACEMENT 
+// El nuevo objeto que creamos sería un ejemplo de la información que deberíamos enviar al área de marketing para la difusión de nuevo producto
+console.table(datosClientePromociones);
 
-let datosclientepromociones =  (clienteCorreo, clientePais, clientenivel1, clienteSaldo, productoMarca, productoPrecio)
-
-//El nuevo objeto que creamos seria un ejemplo de la informacion que deberiamos enviar al area de marketing para la difusion de nuevo producto
-console.table(clientepromoción)
-
-//Operaciones sobre objetos
-//union de objetos
-console.log("%c10.- Uniuoin de Objetos usando el metodo de asignación (ASSING", style_console);
-console.log("Imprimirmos la estructura y valores del objeto PRODUCTO")
+// Operaciones sobre objetos
+// Unión de objetos
+console.log("%c10.- Unión de Objetos usando el método de asignación (ASSIGN)", "color: blue;");
+console.log("Imprimimos la estructura y valores del objeto PRODUCTO");
 console.table(Producto);
 
-//Suponemosque el usuario ya realizo elpago del pedido se covertira en una venta que requiere informacion de ambos objetos
-const venta=Object.assign(producto, Pedido);
-console.log("Consultamos este nuevo objeto VENTA")
+// Suponemos que el usuario ya realizó el pago del pedido; se convertirá en una venta que requiere información de ambos objetos
+const venta = Object.assign({}, Producto, Pedido); // Aseguramos que la nueva variable no afecte a Producto
+console.log("Consultamos este nuevo objeto VENTA");
 console.table(venta);
+
+// Unión de objetos usando SPREAD OPERATOR para evitar la pérdida de información con objetos que concatenen el mismo nombre en sus propiedades
+console.log("%c11.- Unión de Objetos usando SPREAD OPERATOR (...)", "color: blue;");
+console.table(producto);
+console.table(comprador);
+console.table(Pedido);
+
+const venta2 = {
+    producto: { ...producto },
+    comprador: { ...comprador },
+    pedido: { ...Pedido } // Cambiado de 'pedido' a 'Pedido' para que coincida con la variable
+};
+
+console.log("Fusionamos los 3 objetos en uno nuevo, sin pérdida de información");
+console.log(venta2);
+console.table(venta2);
+
+console.log("%c12.- Mutabilidad POST Unión de Objetos", "color: blue;");
+
+// Vamos a verificar el STATUS de MUTABILIDAD de los objetos
+console.log("Vamos a verificar la MUTABILIDAD DEL OBJETO PEDIDO");
+console.log(`¿Está el objeto de Pedido Congelado?: ${Object.isFrozen(Pedido)}`);
+console.log(`¿Está el objeto de Pedido Sellado?: ${Object.isSealed(Pedido)}`);
+
+console.log("Vamos a verificar la mutabilidad del objeto COMPRADOR");
+console.log(`¿Está el objeto de Comprador Congelado?: ${Object.isFrozen(comprador)}`);
+console.log(`¿Está el objeto de Comprador Sellado?: ${Object.isSealed(comprador)}`);
+
+console.log("Vamos a verificar la mutabilidad del objeto PRODUCTO");
+console.log(`¿Está el objeto de Producto Congelado?: ${Object.isFrozen(producto)}`);
+console.log(`¿Está el objeto de Producto Sellado?: ${Object.isSealed(producto)}`);
+
+// Modificamos la estructura del producto, agregando una nueva propiedad
+producto[`isLegacy`] = false;
+console.log(producto);
+console.log(venta2);

@@ -2,68 +2,82 @@ html{
     box-sizing: border-box;
     font-size: 62.5%;
 }
-body {
-    font-size:1.6 rem;
-    font-family: "Lato", sans-serif;
-    background-color: #577dbb;
+
+body{
+    font-size: 1.6rem;
+    font-family: 'lato','sans-serif';
+    background-color: rgb(21, 138, 126);
 }
-*,*:before, *:after{
-box-sizing: inherait;
+/*Estas propiedades son el antes y el despues de box sizing */
+*,*:before,*::after{
+    box-sizing: inherit;
 }
 
-header {
-    padding: 3 ren 0;
+header{
+    padding: 3rem 0;
 }
+
 header h1{
     text-align: center;
-    color: #21883c;
-    font-size: 3.2 rem;
+    color: #ffffff;
+    font-size: 6rem;
 }
-header h2{
+header h2 {
     text-align: center;
 }
+
 header p{
-    color: #1b1b1b1b;
+    color: #1b1b1b;
     text-align: center;
     font-size: 3.2 rem;
 
 }
-header p a {
-    text-decoration: none;
-    margin: 0;
+
+header p a{
+    text-decoration: none ;
+    color: #4cabea;
 }
+
 .DOM{
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 0  auto;
 }
+
 .DOM h2{
     color: #fff;
     text-align: center;
-
 }
+
 .DOM nav a{
     color: #fff;
-    font-size: 20px;
-    text-decoration: noe;
+    font-size: 20 px;
+    text-decoration: none;
     margin-right: 10px;
 }
-.DOM p {
+
+.DOM p{
     color: #2563eb;
     font-size: 20px;
 }
+
 .DOM #formulario{
-    max-width: 200px;
+    max-width: 500px;
     margin: 0 auto;
+
 }
-.DOM #formulario input{
-    display: block;
+
+.DOM #formulario{
+    display:block;
     width: 100%;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: #fff;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem; 
+
 }
+
 .DOM #formulario input[type="submit"]{
-    background-color: lightblue;
+    background-color: #2563eb;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 20px;
@@ -72,14 +86,16 @@ header p a {
 
 .alerta{
     padding: 1rem;
-    color: #fff;
+    text-align: center;
+    color: azure;
     text-transform: uppercase;
     font-size: 20px;
 }
-.alerta.error {
-    background-color: rgb(162,0,0);
 
+.alerta.error{
+    background-color: red;
 }
+
 .alerta.exito{
-    background-color: rgb(7,145,7);
+    background-color: green;
 }
