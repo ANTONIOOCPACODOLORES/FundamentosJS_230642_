@@ -10,9 +10,9 @@ Previo a Iniciar el Desarrollo de Softaware para web usando el freamework de Nod
 |--|--|--|--|
 |1. | Metodologia de Evaluacion |1|Finalizada ✅|
 |2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
-|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
-|4.|Ejercicio 01: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
-|5.|Introducion a Objetos||Activa |
+|3.|Ejercicio: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
+|4.|Ejercicio: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
+|5.|Introdución a Objetos||Finalizada✅|
 ***
 
 ### Autor
