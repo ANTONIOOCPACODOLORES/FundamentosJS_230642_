@@ -5,15 +5,16 @@
 Previo a Iniciar el Desarrollo de Softaware para web usando el freamework de NodeJS, Realizaremos un par de practicas de reporte de JavaScript puro, con el objetivo de confirmar los conocimientos basicos de logica de programación.
 
 ***
-## Historial de practicas
-|No.|Descripción|Potenciador| Estatus|
+## Historial de Prácticas
+
+|   No.|Descripcion|Potenciador|Estatus|
 |--|--|--|--|
-|1. | Metodologia de Evaluacion |1|Finalizada ✅|
-|2.|Inicialización del Proyecto de Fundamentos de Js|5| ✅Finalizado|
-|3.|Ejercicio 01: Declaración de Variables en JS(Undefined/Boolean/Number)|10|✅Finalizada|
-|4.|Ejercicio 01: Declaración de Variables en JS(String/BigInt/Symbol/Null/Function)|6| ✅Finalizada|
-|5.|Introducion a Objetos||Activa |
-***
+|1.|Metodología de evaluación| 1|✔️Finalizada|
+|2.|Inicialización del proyecto de Fundamentos de JS|8|✔️Finalizada|
+|3.|Ejercicio 01: Declaración de variables en JS|6|✔️Finalizada|
+|4.|Ejercicio 02: Tipos de datos en JS|10|✔️Finalizada|
+|5.|Ejercicio 03: Repaso de objetos en JS|19|✔️Finalizada|
+|6.|Ejercicio 04: Repaso de Arreglos en JS|18|✔️Finalizada|
 
 ### Autor
 Creado por : **Antonio Ocpaco Dolores** /[@Antonio Ocpaco Dolores](https://github.com/ANTONIO-OCPACO-DOLORES)
