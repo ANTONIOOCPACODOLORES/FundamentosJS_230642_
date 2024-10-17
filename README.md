@@ -1,5 +1,5 @@
 # FundamentosJS_230642_
- Proyecto de Clase para la Unida 1 de la asignatura de Aplicaciones Web Orientada
+ Proyecto de Clase para la Unida 1 de la asignatura de Aplicaciones Web Orientada a Servicios
 
 ## Descripción
 Previo a Iniciar el Desarrollo de Softaware para web usando el freamework de NodeJS, Realizaremos un par de practicas de reporte de JavaScript puro, con el objetivo de confirmar los conocimientos basicos de logica de programación.
@@ -15,7 +15,7 @@ Previo a Iniciar el Desarrollo de Softaware para web usando el freamework de Nod
 |4.|Ejercicio 02: Tipos de datos en JS|10|✔️Finalizada|
 |5.|Ejercicio 03: Repaso de objetos en JS|19|✔️Finalizada|
 |6.|Ejercicio 04: Repaso de Arreglos en JS|18|✔️Finalizada|
-
+|6.|Ejercicio 05: Repaso de Ciclos y Sentencias de Control en JS||✔️Activa|
 ### Autor
 Creado por : **Antonio Ocpaco Dolores** /[@Antonio Ocpaco Dolores](https://github.com/ANTONIO-OCPACO-DOLORES)
 
